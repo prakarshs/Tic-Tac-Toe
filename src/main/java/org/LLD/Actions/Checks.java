@@ -31,6 +31,10 @@ public class Checks {
     public boolean wonWithMove(String[][] board,Pair<Integer, Integer> move, Players player) {
         boolean wonRow = true;
         boolean wonCol = true;
+        boolean wonDia = true;
+        boolean wonAntiDia = true;
+
+
         // rows ->
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
@@ -50,6 +54,13 @@ public class Checks {
             }
         }
         if(wonCol)return true;
+
+
+        // diagonals \
+        for (int cell = 0; cell < board[cell].length; cell++){
+
+        }
+
 
         return false;
     }
