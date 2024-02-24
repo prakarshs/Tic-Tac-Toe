@@ -30,6 +30,7 @@ public class Checks {
 
     public boolean wonWithMove(String[][] board,Pair<Integer, Integer> move, Players player) {
         // rows ->
+        System.out.println("for row check win");
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
           if (!board[move.getLeft()][cell].equals(player.getPlayerSymbol())) {
@@ -38,6 +39,7 @@ public class Checks {
         }
 
         // cols ^
+        System.out.println("for col check win");
         for (int cell = 0; cell < board.length; cell++) {
 
             if (!board[cell][move.getRight()].equals(player.getPlayerSymbol())) {
