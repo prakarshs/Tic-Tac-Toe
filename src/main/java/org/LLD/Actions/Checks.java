@@ -35,6 +35,7 @@ public class Checks {
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
           if (!board[move.getLeft()][cell].equals(player.getPlayerSymbol())) {
+              System.out.println("herere");
               won = false;
           }
         }
