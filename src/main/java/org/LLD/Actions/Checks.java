@@ -35,7 +35,9 @@ public class Checks {
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
           if (!board[move.getLeft()][cell].equals(String.valueOf(player.getPlayerSymbol()))) {
+              System.out.println("here: "+ player.getPlayerSymbol());
               won = false;
+              break;
           }
         }
 
@@ -43,11 +45,11 @@ public class Checks {
         System.out.println("for col check win");
         for (int cell = 0; cell < board.length; cell++) {
 
-            if (!board[cell][move.getRight()].equals(player.getPlayerSymbol())) {
+            if (!board[cell][move.getRight()].equals(String.valueOf(player.getPlayerSymbol()))) {
                 won = false;
+                break;
             }
         }
-
         return won;
     }
 
