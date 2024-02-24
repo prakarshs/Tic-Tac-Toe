@@ -29,12 +29,13 @@ public class Checks {
 
 
     public boolean wonWithMove(String[][] board,Pair<Integer, Integer> move, Players player) {
+        boolean won = true;
         // rows ->
         System.out.println("for row check win");
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
           if (!board[move.getLeft()][cell].equals(player.getPlayerSymbol())) {
-              return false;
+              won = false;
           }
         }
 
@@ -43,11 +44,14 @@ public class Checks {
         for (int cell = 0; cell < board.length; cell++) {
 
             if (!board[cell][move.getRight()].equals(player.getPlayerSymbol())) {
-                return false;
+                won = false;
             }
         }
-        return true;
+
+        return won;
     }
+
+
 
     public boolean emptyCellLeft(String[][] board) {
         for (int rows = 0; rows < board.length; rows++) {
