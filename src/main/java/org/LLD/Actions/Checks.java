@@ -67,9 +67,13 @@ public class Checks {
 
             //antidia /
             for (int cell = 0, antiCell = board[0].length - 1; cell < board.length; cell++,antiCell--){
-
+                if(board[cell][antiCell].equals(String.valueOf(player.getPlayerSymbol()))){
+                    wonAntiDia = false;
+                }
             }
+            if(wonAntiDia)return true;
         }
+        return false;
 
 
 
