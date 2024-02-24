@@ -52,8 +52,10 @@ public class GameSetup {
            }
            else {
                System.out.println("There Are No More Empty Cells Left. Khichdi Pak Gayi.");
+               won=true;
            }
        }
+       System.out.println("***** THANK YOU FOR PLAYING *****");
 
 
    }
