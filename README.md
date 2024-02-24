@@ -4,5 +4,5 @@
 
 ## Features : 
 * Multiplayer (greater than 2)
-* Custom Size
+* Custom Size (other than 3x3)
 * Any Player Symbol (other than X,O)
