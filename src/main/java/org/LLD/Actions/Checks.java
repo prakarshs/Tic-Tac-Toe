@@ -58,7 +58,7 @@ public class Checks {
         if(move.getRight() == move.getLeft()) {
 
             // diagonals \
-            for (int cell = 0; cell < board[cell].length; cell++) {
+            for (int cell = 0; cell < board[0].length; cell++) {
                 if(!board[cell][cell].equals(String.valueOf(player.getPlayerSymbol()))){
                     wonDia = false;
                 }
@@ -73,11 +73,6 @@ public class Checks {
             }
             if(wonAntiDia)return true;
         }
-        return false;
-
-
-
-
         return false;
     }
 
