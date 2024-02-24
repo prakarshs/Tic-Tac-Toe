@@ -32,7 +32,6 @@ public class Checks {
         boolean wonRow = true;
         boolean wonCol = true;
         // rows ->
-        System.out.println("for row check win");
         for (int cell = 0; cell < board[move.getLeft()].length; cell++) {
 
           if (!board[move.getLeft()][cell].equals(String.valueOf(player.getPlayerSymbol()))) {
@@ -44,7 +43,6 @@ public class Checks {
         if(wonRow)return true;
 
         // cols ^
-        System.out.println("for col check win");
         for (int cell = 0; cell < board.length; cell++) {
 
             if (!board[cell][move.getRight()].equals(String.valueOf(player.getPlayerSymbol()))) {
