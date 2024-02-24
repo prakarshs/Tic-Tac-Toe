@@ -39,7 +39,6 @@ public class GameSetup {
                if (checks.validMove(board, move)) {
                    System.out.println("Making Move...");
                    board = movement.placeMove(board, move, player);
-                   System.out.println(checks.wonWithMove(board, move, player));
                    if (checks.wonWithMove(board, move, player)) {
                        System.out.println(player.getPlayerName() + " Has Won !!");
                        won = true;
