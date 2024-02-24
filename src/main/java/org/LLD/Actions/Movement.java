@@ -16,9 +16,8 @@ public class Movement {
 
         for (int rows = 0; rows < board.length; rows++){
             for (int cols = 0; cols < board[rows].length; cols++){
-                System.out.println(rows +","+cols);
+
                 if(rows == move.getLeft() && cols == move.getRight()){
-                    System.out.println("here");
                     board[rows][cols] = String.valueOf(player.getPlayerSymbol());
                 }
             }
