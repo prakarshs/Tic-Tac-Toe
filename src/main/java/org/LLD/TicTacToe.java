@@ -12,22 +12,28 @@ public class TicTacToe {
         System.out.println("HELLO GAME IS STARTING..");
 
         Gameboard gameboard = new Gameboard();
-        String[][] board = gameboard.generateBoard(3,3);
+        String[][] board = gameboard.generateBoard(5,5);
 
         System.out.println(Arrays.deepToString(board));
 
         Players player1 = Players.builder()
                 .playerName("Vasu")
-                .playerSymbol(PlayerSymbol.X)
+                .playerSymbol(PlayerSymbol.V)
                 .build();
         Players player2 = Players.builder()
                 .playerName("Pari")
-                .playerSymbol(PlayerSymbol.O)
+                .playerSymbol(PlayerSymbol.P)
                 .build();
+        Players player3 = Players.builder()
+                .playerName("Mummy")
+                .playerSymbol(PlayerSymbol.M)
+                .build();
+
 
         Deque<Players> players = new ArrayDeque<>();
         players.add(player1);
         players.add(player2);
+        players.add(player3);
 
         GameSetup gameSetup = GameSetup.builder()
                 .players(players)
