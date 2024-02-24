@@ -71,7 +71,6 @@ public class Checks {
                     wonAntiDia = false;
                 }
             }
-            System.out.println("row:"+wonRow+" col:"+wonCol+" wonDia:"+wonDia+" wonAnti:"+wonAntiDia);
             if(wonAntiDia)return true;
         }
 
