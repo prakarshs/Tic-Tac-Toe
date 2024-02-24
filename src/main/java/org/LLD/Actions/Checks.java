@@ -55,11 +55,23 @@ public class Checks {
         }
         if(wonCol)return true;
 
+        if(move.getRight() == move.getLeft()) {
 
-        // diagonals \
-        for (int cell = 0; cell < board[cell].length; cell++){
+            // diagonals \
+            for (int cell = 0; cell < board[cell].length; cell++) {
+                if(!board[cell][cell].equals(String.valueOf(player.getPlayerSymbol()))){
+                    wonDia = false;
+                }
+            }
+            if(wonDia)return true;
 
+            //antidia /
+            for (int cell = 0, antiCell = board[0].length - 1; cell < board.length; cell++,antiCell--){
+
+            }
         }
+
+
 
 
         return false;
